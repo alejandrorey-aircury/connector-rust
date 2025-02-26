@@ -1,4 +1,5 @@
 use clap::{Args, Parser, Subcommand};
+use dotenv::dotenv;
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
@@ -17,6 +18,8 @@ enum Commands {
 struct DataUpdateInput {}
 
 fn main() {
+    dotenv().ok();
+
     let cli = Cli::parse();
 
     match &cli.command {
