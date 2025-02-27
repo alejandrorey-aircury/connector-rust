@@ -3,13 +3,13 @@ use std::collections::HashMap;
 
 #[derive(Debug, Deserialize)]
 pub struct Definition {
-    source: Source,
-    target: Target,
+    pub source: Source,
+    pub target: Target,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Source {
-    url: String,
+    pub url: String,
     model: SourceModel,
 }
 
@@ -28,7 +28,7 @@ struct SourceTable {
 
 #[derive(Debug, Deserialize)]
 pub struct Target {
-    url: String,
+    pub url: String,
     model: TargetModel,
 }
 
